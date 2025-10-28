@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 // --- CORS Configuration ---
 const FRONTEND_ORIGIN = process.env.NODE_ENV === "development"
   ? "http://localhost:3000"
-  : "https://cohesionafrica.com/"; 
+  : "https://cohesionafrica.com"; 
 
 // Define headers needed for the *main* POST request success
 const successHeaders = {
