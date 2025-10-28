@@ -2,7 +2,9 @@ import { NextResponse } from 'next/server';
 import nodemailer from "nodemailer";
 
 // --- CORS Configuration ---
-const FRONTEND_ORIGIN = "https://cohesionafrica.com"; 
+const FRONTEND_ORIGIN = process.env.NODE_ENV === "development"
+  ? "http://localhost:3000"
+  : "https://backend.cohessionafrica.com"; 
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': FRONTEND_ORIGIN, 

@@ -2,7 +2,9 @@ import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 // --- Configuration ---
-const FRONTEND_ORIGIN = "https://cohesionafrica.com";
+const FRONTEND_ORIGIN = process.env.NODE_ENV === "development"
+  ? "http://localhost:3000"
+  : "https://backend.cohessionafrica.com";
 const COHESION_LOGO_URL =
   "https://cohesionafrica.com/assets/cohesion_logo-C7iedy-3.png";
 
